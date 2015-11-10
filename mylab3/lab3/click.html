@@ -1,0 +1,53 @@
+<html>
+	<head>
+		{% load staticfiles %}
+		<link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}" />
+		<title>search_result</title>
+	</head>
+	<body>
+	<hr />
+	<table width="370" id="Book">
+      <tr>
+        <th colspan=11>Details about the book and the author
+      </tr>
+      <tr>
+        <th width="105">ISBN</th>
+		<th width="105">&nbsp;</th>
+        <th width="105">Title</th>
+		<th width="105">&nbsp;</th>
+		<th width="105">Publisher</th>
+		<th width="105">&nbsp;</th>
+		<th width="105">PublishDate</th>
+		<th width="105">&nbsp;</th>
+		<th width="105">Price</th>
+		<th width="105">&nbsp;</th>
+		<th width="105">AuthorID</th>
+		<th width="105">&nbsp;</th>
+		<th width="105">Name</th>
+		<th width="105">&nbsp;</th>
+		<th width="105">Age</th>
+		<th width="105">&nbsp;</th>
+		<th width="105">Country</th>
+      </tr>
+      <td>{{ book.ISBN }}</td>
+	  <th width="105">&nbsp;</th>
+      <td>{{ book.Title }}</td>
+	  <th width="105">&nbsp;</th>
+	  <td>{{ book.Publisher }}</td>
+	  <th width="105">&nbsp;</th>
+	  <td>{{ book.PublishDate }}</td>
+	  <th width="105">&nbsp;</th>
+	  <td>{{ book.Price }}</td>
+	  <th width="105">&nbsp;</th>
+      <td>{{ author.AuthorID }}</td>
+	  <th width="105">&nbsp;</th>
+      <td>{{ author.Name }}</td>
+	  <th width="105">&nbsp;</th>
+	  <td>{{ author.Age }}</td>
+	  <th width="105">&nbsp;</th>
+	  <td>{{ author.Country }}</td>
+  </tr>
+    </table>
+	<hr />
+	</body>
+</html>

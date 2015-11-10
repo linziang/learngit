@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}" />
+	<title>BookManagement</title>
+{% load staticfiles %}
+</head>
+<body>
+<!-- header begin -->
+<div id="logo"></div>
+<hr />
+<!-- header end -->
+<!-- sidebar begin -->
+<div id="sidebar">
+	<div class="widget">
+	<form action="/search/" method="post">
+		<div class="title">search</div>
+		<input class="text" type="text" name="word" value="input" onFocus="if(value=='input') {value=''}" onBlur="if(value=='') {value='input'}">
+	  <div class="reminder"></div>
+		<input type="submit" value="search" class="submit">
+	</form>
+	</div>
+	
+</div>
+<!-- sidebar end -->
+<div id="content">
+<div id="singlebutton">
+	<a href="/add/"></a></div>
+<table id="Book_list">
+	<tr>
+		<th width="105">ISBN</th>
+		<th width="185">Title</th>
+		<th colspan=2>Opration</th>
+	</tr>
+	{% for Book in Book_list %}
+	<tr>
+		<td>{{ Book.ISBN }}</td>
+		<td><a href="/click/?id={{Book.id}}">{{Book.Title}}</a></td>
+		<td><a href="/delete/?id={{Book.id}}">delete</a></td>
+	</tr>
+	{% endfor %}
+</table>
+
+</div>
+</body>
+</html>
