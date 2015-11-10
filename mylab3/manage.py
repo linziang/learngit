@@ -1,4 +1,6 @@
 #!/usr/bin/env python
+not really good
+
 import os
 import sys
 

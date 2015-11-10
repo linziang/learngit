@@ -28,4 +28,4 @@ def click(request):
     p = Book.objects.get(id=clid)
     q = p.AuthorID
     c = Context({"book":p,"author":q})
-    return render_to_response("click.html",c)
+    return render_to_response("click.html",c) not really good!

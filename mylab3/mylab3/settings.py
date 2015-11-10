@@ -1,4 +1,5 @@
 # Django settings for mylab3 project.
+not really good
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
